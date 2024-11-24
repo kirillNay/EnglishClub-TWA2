@@ -1,0 +1,57 @@
+.wordCard {
+  padding: 24px;
+}
+
+.wordCard__loading {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wordCard__image {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.wordCard__title {
+  margin-top: 32px;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.wordCard__subtitle {
+  margin-top: 12px;
+  font-size: 18px;
+}
+
+.wordCard__subtitle__separator {
+  margin-left: 6px;
+  margin-right: 6px;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.wordCard__definition {
+  margin-top: 12px;
+  font-size: 18px;
+}
+
+.wordCard__examples {
+  margin-top: 24px;
+  font-size: 18px;
+}
+
+.wordCard__examples__title {
+  font-weight: 600;
+}
+
+.wordCard__examples_item {
+  margin-top: 8px;
+}
+
+.wordCard__examples_item_highlited {
+  font-weight: 600;
+}

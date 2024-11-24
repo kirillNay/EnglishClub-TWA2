@@ -1,0 +1,8 @@
+:root {
+    --background-color: white;
+    --primary-color: orange;
+}
+
+.debugContainer {
+  position: absolute;
+}

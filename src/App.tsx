@@ -1,22 +1,20 @@
 import "./App.css";
-import {
-  BrowserRouter as Router,
-  NavLink,
-  Route,
-  Routes,
-} from "react-router-dom";
 import WordCard from "./word_card/components/WordCard";
+import { useLaunchParams } from "@telegram-apps/sdk-react";
 
-function App() {
-  return (
-    <Router>
-      <>
-        <Routes>
-          <Route path="word" element={<WordCard />} />
-        </Routes>
-      </>
-    </Router>
-  );
-}
+const App: React.FC = () => {
+  const launchParams = useLaunchParams();
+  if (launchParams.startParam) {
+    const match = launchParams.startParam?.match(/^wordId=(\d+)$/);
+    if (match) {
+      const userId = launchParams.initData?.user?.id;
+      if (userId) {
+        return <WordCard id={match[1]} userId={userId.toString()} />;
+      }
+    }
+  }
+
+  return <div>Not found! {launchParams.startParam}</div>;
+};
 
 export default App;
